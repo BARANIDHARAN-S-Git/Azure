@@ -18,4 +18,4 @@ GithubLink:https://github.com/BARANIDHARAN-S-Git/Azure
 
 9)And Select the App Service name ,You created in the Azure Portal,Now Publish it.
 
-10)After Publish Site URL will generated ,Using the URL in our Browser we can see the Output.
+10)After Publish ,Site URL will generated ,Using the URL in our Browser we can see the Output.
