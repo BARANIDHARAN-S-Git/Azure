@@ -1,0 +1,352 @@
+GithubLink:https://github.com/BARANIDHARAN-S-Git/Azure
+----------------------------School.Master------------------------------
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="School.master.cs" Inherits="SchoolWebform.School" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="font-family:Arial">
+    <tr>
+        <td colspan="2" style="width:800px; height:80px; background-color:black;color:red; 
+            text-align:center;font-size:larger">
+            <h1>
+                RainbowSchool
+            </h1>
+        </td>
+    </tr>
+    <tr>
+       
+        <td style="height:500px; background-color:aquamarine; width:650px">
+               
+                 <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+        </td>
+    </tr>
+    <tr>
+       
+    </tr>
+</table>
+    </form>
+</body>
+</html>
+-------------------------------------SchoolDetails.aspx-------------------------------------------
+<%@ Page Title="" Language="C#" MasterPageFile="~/School.Master" AutoEventWireup="true" CodeBehind="SchoolDetails.aspx.cs" Inherits="SchoolWebform.Student" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 686px;
+            height: 262px;
+            margin-left: 60px;
+        margin-top: 0px;
+    }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <p>
+        <br />
+    </p>
+    <p>
+        <img alt="ImageNotFound" class="auto-style1" src="Images/School.jpg" /></p>
+    <p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        </p>
+    <p>
+    </p>
+    <p style="width: 925px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p style="width: 925px">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="StudentButton" runat="server" OnClick="StudentButton_Click" Text="Student" BorderColor="#3333CC" ForeColor="White" style="margin-left: 0px" Width="95px" BackColor="Black" />
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="SubjectButton" runat="server" Text="Subject" OnClick="SubjectButton_Click" BorderColor="#3333FF" ForeColor="White" Width="92px" BackColor="Black" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="ClassButton" runat="server" Text="Class" OnClick="ClassButton_Click" BorderColor="Black" ForeColor="White" Width="77px" BackColor="Black" />
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+
+</asp:Content>
+------------------------------------SchoolDetails.aspx.cs----------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SchoolWebform
+{
+    public partial class Student : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        protected void StudentButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Student.aspx");
+        }
+
+        protected void SubjectButton_Click(object sender, EventArgs e)
+        { 
+            Response.Redirect("~/Subject.aspx");
+        }
+
+        protected void ClassButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Class.aspx");
+        }
+
+        
+    }
+}
+----------------------------------Student.aspx--------------------------------
+<%@ Page Title="" Language="C#" MasterPageFile="~/School.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="SchoolWebform.Student1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;
+    <br />
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="StudentLabe" runat="server" Text="Student" ForeColor="#CC3300" Height="50px" style="margin-left: 0px" Width="140px" Font-Size="XX-Large" BackColor="White"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    <br />
+    <br />
+    &nbsp;<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <asp:GridView ID="Student" runat="server" AutoGenerateColumns="false" Height="16px" style="margin-left: 90px; margin-top: 0px" Width="569px">
+            <Columns>
+                 <asp:BoundField DataField="RegisterNumber" HeaderText="RegisterNumber"/>
+                 <asp:BoundField DataField="StudentName" HeaderText="StudentName"/>
+                 <asp:BoundField DataField="Age" HeaderText="Age"/>
+                
+            </Columns>
+
+        </asp:GridView>
+    <br />
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="BackButton" runat="server" OnClick="BackButton_Click1" Text="Back" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    </asp:Content>
+
+----------------------------------Student.aspx.cs----------------------------
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SchoolWebform
+{
+    public partial class Student1 : System.Web.UI.Page
+    {
+        string connection = @"Data Source=mysqlbarani.database.windows.net;Initial Catalog=school;User ID=barani;Password=admin@123";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            using (SqlConnection s = new SqlConnection(connection))
+            {
+                s.Open();
+                SqlDataAdapter sd = new SqlDataAdapter("select * from Student", connection);
+                DataTable dtable = new DataTable();
+                sd.Fill(dtable);
+                Student.DataSource = dtable;
+                Student.DataBind();
+            }
+        }
+
+       
+            
+
+        protected void BackButton_Click1(object sender, EventArgs e)
+        {
+                Response.Redirect("~/SchoolDetails");
+            
+        }
+    }
+}
+----------------------------------Subject.aspx--------------------------------------
+<%@ Page Title="" Language="C#" MasterPageFile="~/School.Master" AutoEventWireup="true" CodeBehind="Subject.aspx.cs" Inherits="SchoolWebform.Subject" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <br />
+    <br />
+
+    <br />
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Label ID="SubjectLabel" runat="server" BackColor="White" ForeColor="#CC3300" Height="49px" Text="Subject" Width="140px" Font-Size="XX-Large"></asp:Label>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:GridView ID="Subjects" runat="server" AutoGenerateColumns="false" Width="737px" OnSelectedIndexChanged="Subjects_SelectedIndexChanged" style="margin-left: 34px">
+            <Columns>
+                 <asp:BoundField DataField="SubjectId" HeaderText="SubjectId" />
+                 <asp:BoundField DataField="SubjectName" HeaderText="SubjectName" />
+                
+
+            </Columns>
+
+        </asp:GridView>
+
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="BackButton" runat="server" OnClick="BackButton_Click" Text="Back" />
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <br />
+    
+</asp:Content>
+-------------------------------------Subject.aspx.cs-----------------------------------
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SchoolWebform
+{
+    public partial class Subject : System.Web.UI.Page
+    {
+        string connection = @"Data Source=mysqlbarani.database.windows.net;Initial Catalog=school;User ID=barani;Password=admin@123";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection s = new SqlConnection(connection))
+            {
+                s.Open();
+                SqlDataAdapter sd = new SqlDataAdapter("select * from Subjects", connection);
+                DataTable dtable = new DataTable();
+                sd.Fill(dtable);
+                Subjects.DataSource = dtable;
+                Subjects.DataBind();
+            }
+
+        }
+
+        protected void BackButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/SchoolDetails.aspx");
+        }
+
+        protected void Subjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+-----------------------------------Class.aspx------------------------------------
+<%@ Page Title="" Language="C#" MasterPageFile="~/School.Master" AutoEventWireup="true" CodeBehind="Class.aspx.cs" Inherits="SchoolWebform.Class" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Label ID="ClassLabel" runat="server" BackColor="White" ForeColor="#CC3300" Text="Class" Width="105px" Font-Size="XX-Large"></asp:Label>
+
+    <br />
+    <br />
+    <br />
+    <br />
+&nbsp;&nbsp;    <asp:GridView ID="Classtable" runat="server" AutoGenerateColumns="false" style="margin-left: 38px" Width="751px">
+            <Columns>
+                 <asp:BoundField DataField="classRoomNo" HeaderText="classRoomNo" />
+                 <asp:BoundField DataField="NoOfStudentsInClass" HeaderText="NoOfStudentsInClass" />
+                 
+                
+            </Columns>
+
+        </asp:GridView>
+
+    <br />
+    <br />
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="BackButton" runat="server" OnClick="BackButton_Click" Text="Back" />
+
+</asp:Content>
+--------------------------------Class.aspx.cs---------------------------------
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SchoolWebform
+{
+    public partial class Class : System.Web.UI.Page
+    {
+        string connection = @"Data Source=mysqlbarani.database.windows.net;Initial Catalog=school;User ID=barani;Password=admin@123";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            using (SqlConnection s = new SqlConnection(connection))
+            {
+                s.Open();
+                SqlDataAdapter sd = new SqlDataAdapter("select * from Class", connection);
+                DataTable dtable = new DataTable();
+                sd.Fill(dtable);
+                Classtable.DataSource = dtable;
+                Classtable.DataBind();
+            }
+
+        }
+
+        protected void BackButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/SchoolDetails");
+        }
+    }
+}

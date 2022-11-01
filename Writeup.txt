@@ -1,0 +1,21 @@
+GithubLink:https://github.com/BARANIDHARAN-S-Git/Azure
+--------------------------------------------------------------------
+1)Use The Existing School Webform Project.
+
+2)Create a new SQL server and database in the Azure Portal.
+
+3)Coneect to the Database in the SSMS with the correct server name,Login and password.
+
+4)create Table Student,Subjects and Class.
+
+5)Insert values to the Student,Subjects and Class Tables.
+
+6)Create AppService in the Azure Portal.
+
+7)Open The Project in the VisualStudio.
+
+8)Right Click the Project and select the Publish Option,Then Select Azure Option and select Azure app Service.
+
+9)And Select the App Service name ,You created in the Azure Portal,Now Publish it.
+
+10)After Publish Site URL will generated ,Using the URL in our Browser we can see the Output.
